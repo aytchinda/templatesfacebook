@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.login-title{
+    background-color: none;
+    grid-area: login-title;
+}
+.login-form{
+    background-color: none;
+    grid-area: login-form;
+
+}
+.login-footer{
+    background-color: none;
+    grid-area: login-footer;
+
+}
+
+
+.container-login{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "login-title" 
+    "login-form" 
+    "login-footer";
+
+    height: 100vh;
+}
+
+@media screen and (min-width: 900px) {
+    .container-login{
+        padding: 100px 50px;
+        height: 75vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 200px;
+        grid-template-areas: 
+        "login-title login-form"
+        "none login-footer";
+    }
+}
+
