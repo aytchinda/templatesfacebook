@@ -1,0 +1,158 @@
+/* LOGIN PAGE */
+
+.login-title {
+    grid-area: login-title;
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.login-title h1 {
+    color: #1877f2;
+    font-size: 5.5rem;
+    margin: 1px;
+    font-weight: bold;
+
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.login-title p {
+    font-size: 1.9rem;
+    color: black;
+    line-height: 1.9rem;
+    
+}
+
+.login-form {
+    grid-area: login-form;
+    margin: 0 auto;
+    width: 340px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form .form-row {
+    margin: 15px 0;
+}
+
+.login-form .form-row input {
+    height: 50px;
+    font-size: 1.2rem;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #ccd0d5;
+    padding: 0 10px;
+    outline: none;
+    background-color: #f5f6f7;
+    transition: all 0.2s ease;
+}
+
+.login-form .form-row input:focus {
+    border: 1px solid #1877f2;
+    background-color: white;
+}
+
+.login-form .form-button .bt-login-submit {
+    background-color: #1877f2;
+    color: white;
+    width: 95%;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.login-form .form-button .bt-login-submit:hover {
+    background-color: #165cdb;
+}
+
+.login-form .form-infos p a {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 0.9rem;
+}
+
+.login-form .form-infos p a:hover {
+    text-decoration: underline;
+}
+
+.login-form .divider {
+    border: 0.1px solid #dadde1;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.login-form .form-button .bt-login-create-account {
+    background-color: #42b72a;
+    color: white;
+    width: 100%; /* Assure qu'il prend toute la largeur disponible */
+    margin-top: 15px;
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 6px;
+    display: block;
+}
+
+.login-form .form-button .bt-login-create-account:hover {
+    background-color: #36a420;
+}
+
+
+.login-footer {
+    grid-area: login-footer;
+    width: 340px;
+    margin: 20px auto;
+    text-align: center;
+    color: #606770;
+}
+
+.login-footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.login-footer p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-footer p a:hover {
+    text-decoration: underline;
+}
+
+.container-login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "login-title" 
+        "login-form" 
+        "login-footer";
+    height: 100vh;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .container-login {
+        padding: 100px 50px;
+        height: 75vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 200px;
+        grid-template-areas: 
+            "login-title login-form"
+            "none login-footer";
+    }
+
+    .login-title {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .container-login {
+        grid-template-columns: 600px 400px;
+        justify-content: center;
+    }
+}
