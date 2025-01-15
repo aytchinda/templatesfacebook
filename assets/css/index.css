@@ -13,7 +13,6 @@ header {
 
 #aside-left {
     grid-area: aside-left;
-    background-color: aqua;
 }
 
 #aside-right {
@@ -31,6 +30,7 @@ header {
     height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "aside-left content aside-right";
+    padding-top: 65px;
     padding-top: 65px;
 }
 /*********************** MENU ******************************/
@@ -132,6 +132,7 @@ header {
 #droite{
     display: flex;
     margin-right: 50px;
+    top: 2px;
     
    
 }
@@ -147,11 +148,12 @@ header .notification {
     padding: 5px;
     border-radius: 50px;
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
     text-align: center;
+    
     color: white;
-    font-size: .6em;
+    font-size: .5em;
     font-weight: bold;
     position: absolute;
 }
@@ -180,7 +182,7 @@ header #header-right .header-icon .notification {
 }
 
 #aside-left .navigation-item:nth-child(1) img {
-    border-radius: 50px;
+    border-radius:50px;
 }
 
 #aside-left .navigation-item .navigation-description {
@@ -230,6 +232,9 @@ header #header-right .header-icon .notification {
     #header-left {
         flex: none;
     }
+    #header-right {
+        flex: none;
+    }
 }
 
 @media screen and (min-width:600px) and (max-width: 900px) {
@@ -264,6 +269,13 @@ header #header-right .header-icon .notification {
     #header-left {
         flex: none;
     }
+    #header-right {
+        flex: none;
+    }
+   #droite{
+    right: 25px;
+   }
+
     #header-center .header-icon:nth-child(1),
     #header-center .header-icon:nth-child(2),
     #header-center .header-icon:nth-child(3),
@@ -315,4 +327,7 @@ header #header-right .header-icon .notification {
     #header-right {
         padding-right: 20px;
     }
+   
+   
+
 }
