@@ -9,6 +9,7 @@ header {
     background-color: white;
     width: 100vw;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    z-index: 99999;
 }
 
 #aside-left {
@@ -22,17 +23,18 @@ header {
 }
 
 .content {
-    background-color: gold;
     grid-area: content;
+    padding-top: 20px;
 
 }
 
 .container-home {
     display: grid;
     height: 100vh;
-    grid-template-columns: 350px 3fr 300px;
+    grid-template-columns: 350px 650px 300px;
     grid-template-areas: "aside-left content aside-right";
     padding-top: 65px;
+    justify-content: space-between;
     /* padding-top: 65px; */
     /* gap: 10px; */
 }
@@ -121,6 +123,7 @@ header {
 #header-right .username {
     color: gray;
     font-size: 0.6em;
+    display: flex;
 }
 #header-right .user-infos {
     margin-right: 105px;
@@ -255,12 +258,105 @@ header #header-right .header-icon .notification {
 .offline{
     background-color: gray;
 }
+/*********************** CAROUSEL *******************************/
+.stories-item {
+    width: 160px;
+    position: relative;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+
+}
+
+.stories-item img {
+    width: 150px;
+    height: 320px;
+    border-radius: 10px;
+}
+.story-message{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 140px;
+    height: 51px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 55px;
+
+}
+.fa-plus-circle{
+    position: absolute;
+    bottom: 60px;
+    left: 64px;
+    z-index: 2;
+    color: blue;
+    font-size: 1.4rem;
+}
+.story-username{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 170px;
+    height: 35px;
+    border-radius: 0 0 10px 10px ;
+}
+.owl-stage{
+    height: 380px;
+    padding: 10px;
+
+}
+/*********************** CREATE POST *******************************/
+
+.create-post {
+    border-radius: 10px;
+}
+.create-post .user-news{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.create-post .user-news img{
+    display: flex;
+    border-radius: 50px;
+}
+.create-post .bt-add-post{
+    flex: 1;
+    background-color: #efefef;
+    margin: 0 20px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    padding-left: 30px;
+    color: gray;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.create-post .divider{
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 0 auto;
+}
+.create-post .action-items{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+.create-post .action-item{
+    display: flex;
+    align-items: center;
+}
 /*********************** RESPONSIVE *******************************/
 
 @media screen and (min-width:900px) and (max-width: 1300px) {
     .container-home {
-        grid-template-columns: 3fr 300px;
+        grid-template-columns: 600px 300px;
         grid-template-areas: "content aside-right";
+        justify-content: center;
     }
     #aside-left {
         display: none;
@@ -295,8 +391,9 @@ header #header-right .header-icon .notification {
 
 @media screen and (min-width:600px) and (max-width: 900px) {
     .container-home {
-        grid-template-columns: 1fr;
+        grid-template-columns: 90%;
         grid-template-areas: "content";
+        justify-content: center;
     }
     #aside-left,
     #aside-right {
@@ -343,8 +440,10 @@ header #header-right .header-icon .notification {
 
 @media screen and (max-width: 600px) {
     .container-home {
-        grid-template-columns: 1fr;
+        grid-template-columns: 95%;
         grid-template-areas: "content";
+        justify-content: center;
+
     }
     #aside-left,
     #aside-right {
