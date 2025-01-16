@@ -4,7 +4,7 @@ header {
     font-size: 2.3rem;
     display: flex;
     height: 65px;
-    
+
     position: fixed;
     background-color: white;
     width: 100vw;
@@ -15,7 +15,7 @@ header {
 #aside-left {
     grid-area: aside-left;
 
-   
+
 }
 
 #aside-right {
@@ -38,6 +38,7 @@ header {
     /* padding-top: 65px; */
     /* gap: 10px; */
 }
+
 /*********************** MENU ******************************/
 
 #header-left {
@@ -125,22 +126,24 @@ header {
     font-size: 0.6em;
     display: flex;
 }
+
 #header-right .user-infos {
     margin-right: 105px;
 }
+
 #header-right .header-icon img {
     width: 25px;
     background-color: #ccc;
     padding: 10px;
-    
+
 }
 
-#droite{
+#droite {
     display: flex;
     margin-right: 50px;
     top: 2px;
-    
-   
+
+
 }
 
 
@@ -157,7 +160,7 @@ header .notification {
     width: 13px;
     height: 13px;
     text-align: center;
-    
+
     color: white;
     font-size: .5em;
     font-weight: bold;
@@ -174,13 +177,15 @@ header #header-right .header-icon .notification {
     left: 33px;
     z-index: 1;
 }
+
 /*********************** ASIDE LEFT *******************************/
 
 #aside-left {
-    padding: 20px;  
+    padding: 20px;
 
-   
+
 }
+
 #aside-left .navigation-items {
     position: fixed;
 }
@@ -195,7 +200,7 @@ header #header-right .header-icon .notification {
 }
 
 #aside-left .navigation-item:nth-child(1) img {
-    border-radius:50px;
+    border-radius: 50px;
 }
 
 #aside-left .navigation-item .navigation-description {
@@ -212,10 +217,12 @@ header #header-right .header-icon .notification {
     text-decoration: none;
     color: black;
 }
+
 /*********************** ASIDE RIGHT *******************************/
 #aside-right {
     padding-bottom: 20px;
 }
+
 #aside-right .users-items {
     position: fixed;
     height: 95vh;
@@ -223,6 +230,7 @@ header #header-right .header-icon .notification {
     right: 0;
     padding-right: 20px;
 }
+
 #aside-right .users-item {
     display: flex;
     align-items: center;
@@ -230,6 +238,7 @@ header #header-right .header-icon .notification {
     padding: 5px;
     position: relative;
 }
+
 #aside-right .users-item img {
     border-radius: 50px;
     width: 50px;
@@ -239,11 +248,13 @@ header #header-right .header-icon .notification {
     font-weight: bold;
     padding-left: 10px;
 }
+
 #aside-right .users-item:hover {
     background-color: #efefef;
     border-radius: 5px;
 }
-#aside-right .users-item .status{
+
+#aside-right .users-item .status {
     width: 9px;
     height: 9px;
     position: absolute;
@@ -252,12 +263,15 @@ header #header-right .header-icon .notification {
     border-radius: 50px;
     border: 1px solid white;
 }
-.online{
+
+.online {
     background-color: green;
 }
-.offline{
+
+.offline {
     background-color: gray;
 }
+
 /*********************** CAROUSEL *******************************/
 .stories-item {
     width: 160px;
@@ -274,7 +288,8 @@ header #header-right .header-icon .notification {
     height: 320px;
     border-radius: 10px;
 }
-.story-message{
+
+.story-message {
     position: absolute;
     bottom: 0;
     background-color: white;
@@ -287,7 +302,8 @@ header #header-right .header-icon .notification {
     margin-top: 55px;
 
 }
-.fa-plus-circle{
+
+.fa-plus-circle {
     position: absolute;
     bottom: 60px;
     left: 64px;
@@ -295,34 +311,40 @@ header #header-right .header-icon .notification {
     color: blue;
     font-size: 1.4rem;
 }
-.story-username{
+
+.story-username {
     position: absolute;
     bottom: 0;
     background-color: white;
     width: 170px;
     height: 35px;
-    border-radius: 0 0 10px 10px ;
+    border-radius: 0 0 10px 10px;
 }
-.owl-stage{
+
+.owl-stage {
     height: 380px;
     padding: 10px;
 
 }
+
 /*********************** CREATE POST *******************************/
 
 .create-post {
     border-radius: 10px;
 }
-.create-post .user-news{
+
+.create-post .user-news {
     display: flex;
     align-items: center;
     padding: 10px;
 }
-.create-post .user-news img{
+
+.create-post .user-news img {
     display: flex;
     border-radius: 50px;
 }
-.create-post .bt-add-post{
+
+.create-post .bt-add-post {
     flex: 1;
     background-color: #efefef;
     margin: 0 20px;
@@ -335,21 +357,127 @@ header #header-right .header-icon .notification {
     cursor: pointer;
 }
 
-.create-post .divider{
+.create-post .divider {
     border: 1px solid #ccc;
     width: 90%;
     margin: 0 auto;
 }
-.create-post .action-items{
+
+.create-post .action-items {
     display: flex;
     justify-content: space-evenly;
     margin: 20px 0;
     padding-bottom: 20px;
 }
-.create-post .action-item{
+
+.create-post .action-item {
     display: flex;
     align-items: center;
 }
+
+/*********************** MODAL *******************************/
+.modal-post {
+    width: 500px;
+    /* Conserve ta largeur de base */
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    display: none;
+    /* Assure un fond clair */
+    z-index: 2;
+}
+
+.modal-header .modal-title h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.close-modal {
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-header .fa-times {
+    position: absolute;
+    right: 5px;
+    font-size: 1.5rem;
+    background-color: #ccc;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.modal-post .divider {
+    border: 0.1px solid #ccc;
+    margin: 10px 0;
+}
+
+.modal-body .user-new-modal {
+    display: flex;
+    align-items: center;
+}
+
+.modal-body .user-new-modal .profile-picture {
+    padding: 10px;
+}
+
+.modal-body , .modal-footer{
+    padding: 10px;
+}
+
+.modal-body .post-content textarea{
+    width: 96%;
+    border: none;
+    outline: none;
+    font-size: 1.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+
+.username {
+    font-weight: bold;
+}
+.modal-footer .modal-icon {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.modal-infos{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.modal-infos-icons{
+    display: flex;  
+    gap: 5px; 
+}
+.modal-infos-icon i{
+    flex: 1;
+}
+.modal-infos .modal-infos-title{
+   flex: 1;
+   font-weight: bold;
+   font-size: 1.2rem;
+}
+.bt-modal-submit {
+    background-color: #1877f2;
+    color: white;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
 /*********************** RESPONSIVE *******************************/
 
 @media screen and (min-width:900px) and (max-width: 1300px) {
@@ -358,32 +486,40 @@ header #header-right .header-icon .notification {
         grid-template-areas: "content aside-right";
         justify-content: center;
     }
+
     #aside-left {
         display: none;
     }
+
     .user-infos {
         display: none !important;
     }
+
     #header-left input {
         width: 50px;
         height: 50px;
         cursor: pointer;
     }
+
     #header-left input:hover {
         width: 150px;
         padding-left: 35px;
         font-size: 1.3rem;
     }
+
     #header-left input::placeholder {
         visibility: hidden;
     }
+
     #header-left .fa-search {
         top: 13px;
         left: 35px;
     }
+
     #header-left {
         flex: none;
     }
+
     #header-right {
         flex: none;
     }
@@ -395,39 +531,48 @@ header #header-right .header-icon .notification {
         grid-template-areas: "content";
         justify-content: center;
     }
+
     #aside-left,
     #aside-right {
         display: none;
     }
+
     .user-infos {
         display: none !important;
     }
+
     #header-left input {
         width: 50px;
         height: 50px;
         cursor: pointer;
     }
+
     #header-left input:hover {
         width: 150px;
         padding-left: 35px;
         font-size: 1.3rem;
     }
+
     #header-left input::placeholder {
         visibility: hidden;
     }
+
     #header-left .fa-search {
         top: 13px;
         left: 35px;
     }
+
     #header-left {
         flex: none;
     }
+
     #header-right {
         flex: none;
     }
-   #droite{
-    right: 25px;
-   }
+
+    #droite {
+        right: 25px;
+    }
 
     #header-center .header-icon:nth-child(1),
     #header-center .header-icon:nth-child(2),
@@ -445,33 +590,41 @@ header #header-right .header-icon .notification {
         justify-content: center;
 
     }
+
     #aside-left,
     #aside-right {
         display: none;
     }
+
     .user-infos {
         display: none !important;
     }
+
     #header-left input {
         width: 50px;
         height: 50px;
         cursor: pointer;
     }
+
     #header-left input:hover {
         width: 150px;
         padding-left: 35px;
         font-size: 1.3rem;
     }
+
     #header-left input::placeholder {
         visibility: hidden;
     }
+
     #header-left .fa-search {
         top: 13px;
         left: 35px;
     }
+
     #header-left {
         flex: none;
     }
+
     #header-center .header-icon:nth-child(1),
     #header-center .header-icon:nth-child(2),
     #header-center .header-icon:nth-child(3),
@@ -479,10 +632,11 @@ header #header-right .header-icon .notification {
     #header-center .header-icon:nth-child(5) {
         display: none;
     }
+
     #header-right {
         padding-right: 20px;
     }
-   
-   
+
+
 
 }

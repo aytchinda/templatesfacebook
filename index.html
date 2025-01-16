@@ -241,7 +241,7 @@
                         <div class="profile-picture">
                             <img src="assets/images/profile/pdp.jpg" alt="" width="50" height="50">
                         </div>
-                        <div class="bt-add-post">Quoi de neuf , Aymard</div>
+                        <div class="bt-add-post" id="add-post">Quoi de neuf , Aymard</div>
                     </div>
                     <div class="divider"></div>
                     <div class="action-items">
@@ -483,20 +483,24 @@
         </div>
     </div>
 
-    <div class="modal-post">
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-post" id="modal-post">
         <div class="modal-header">
             <div class="close-modal" id="close-modal">
                 <i class="fas fa-times"></i>
             </div>
             <div class="modal-title">
-                Créer une publication
+                <h5>
+                    Créer une publication
+
+                </h5>
             </div>
         </div>
 
         <div class="divider"></div>
         <div class="modal-body">
             <div class="user-new-modal">
-                <div class="pprofile-picture">
+                <div class="profile-picture">
                     <img src="assets/images/profile/pdp.jpg" alt="" width="50" height="50">
                 </div>
                 <div class="username-modal">
@@ -511,18 +515,29 @@
                 </div>
             </div>
             <div class="post-content">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Quoi de neuf, Aymard?"></textarea>
+                <textarea name="" id="" cols="30" rows="5" placeholder="Quoi de neuf, Aymard?"></textarea>
             </div>
         </div>
         <div class="modal-footer">
             <div class="modal-icon">
-                <i class="smiley smiley-gray-icon"></i>
+                <img src="assets/images/icon/square-image.png" alt="" width="38">
                 <i class="smiley smiley-gray-icon"></i>
             </div>
-            <div class="modal-infos">
+            <div class="modal-infos box">
                 <div class="modal-infos-title">
                     Ajouter une publication
                 </div>
+                <div class="modal-infos-icons">
+                    <i class="image-icon"></i>
+                    <i class="friend-icon"></i>
+                    <i class="smiley-icon"></i>
+                    <i class="gps-icon"></i>
+                    <i class="request-icon"></i>
+                    <i class="other-icon"></i>
+                </div>
+            </div>
+            <div class="modal-button">
+                <button class="bt-modal-submit">Publier</button>
             </div>
         </div>
     </div>
