@@ -13,25 +13,28 @@ header {
 
 #aside-left {
     grid-area: aside-left;
+
+   
 }
 
 #aside-right {
-    background-color: brown;
     grid-area: aside-right;
 }
 
 .content {
     background-color: gold;
     grid-area: content;
+
 }
 
 .container-home {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 350px 3fr 300px;
     grid-template-areas: "aside-left content aside-right";
     padding-top: 65px;
-    padding-top: 65px;
+    /* padding-top: 65px; */
+    /* gap: 10px; */
 }
 /*********************** MENU ******************************/
 
@@ -171,8 +174,15 @@ header #header-right .header-icon .notification {
 /*********************** ASIDE LEFT *******************************/
 
 #aside-left {
-    padding: 20px;
+    padding: 20px;  
+
+   
 }
+#aside-left .navigation-items {
+    position: fixed;
+}
+
+
 
 #aside-left .navigation-item {
     display: flex;
@@ -199,11 +209,57 @@ header #header-right .header-icon .notification {
     text-decoration: none;
     color: black;
 }
+/*********************** ASIDE RIGHT *******************************/
+#aside-right {
+    padding-bottom: 20px;
+}
+#aside-right .users-items {
+    position: fixed;
+    height: 95vh;
+    overflow: scroll;
+    right: 0;
+    padding-right: 20px;
+}
+#aside-right .users-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+}
+#aside-right .users-item img {
+    border-radius: 50px;
+    width: 50px;
+}
+
+#aside-right .users-item .username {
+    font-weight: bold;
+    padding-left: 10px;
+}
+#aside-right .users-item:hover {
+    background-color: #efefef;
+    border-radius: 5px;
+}
+#aside-right .users-item .status{
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    bottom: 20px;
+    left: 47px;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+.online{
+    background-color: green;
+}
+.offline{
+    background-color: gray;
+}
 /*********************** RESPONSIVE *******************************/
 
 @media screen and (min-width:900px) and (max-width: 1300px) {
     .container-home {
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 3fr 300px;
         grid-template-areas: "content aside-right";
     }
     #aside-left {
